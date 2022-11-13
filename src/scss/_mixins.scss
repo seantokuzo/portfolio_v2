@@ -1,0 +1,26 @@
+@mixin flex($direction, $align, $justify) {
+  display: flex;
+  flex-direction: $direction;
+  align-items: $align;
+  justify-content: $justify;
+}
+
+@mixin absolute-center($transY: -50%) {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, $transY);
+}
+
+@mixin transition-ease($time: 350ms) {
+  transition: all $time ease-in-out;
+}
+
+@mixin box-shadow($color: black, $op1: 0.5, $op2: 0.35) {
+  box-shadow: 0.25em 0.25em 0.75em rgba($color, $op1),
+    0.125em 0.125em 0.25em rgba($color, $op2);
+}
+
+@mixin text-shadow($color: black, $op: 0.5) {
+  text-shadow: .25em .25em .5em rgba($color, $op);
+}
