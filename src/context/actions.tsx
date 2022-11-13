@@ -1,0 +1,4 @@
+export enum ActionType {
+  TOGGLE_DARK_MODE = 'TOGGLE_DARK_MODE',
+  CHANGE_THEME_COLOR = 'CHANGE_THEME_COLOR'
+}
