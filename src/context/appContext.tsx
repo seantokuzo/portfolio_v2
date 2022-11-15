@@ -2,35 +2,33 @@ import { useReducer, useContext, createContext } from 'react'
 import { ActionType } from './actions'
 import reducer from './reducer'
 
-enum ThemeColor {
-  red = 'red',
-  orange = 'orange',
-  yellow = 'yellow',
-  green = 'green',
-  purple = 'purple',
-  blue = 'blue',
-  vanilla = 'vanilla'
+type WindowSize = {
+  width: number
+  height: number
 }
 
 export interface StateInterface {
+  windowSize: WindowSize
   darkMode: boolean
-  themeColor: string
 }
 
 const initialState: StateInterface = {
-  darkMode: true,
-  themeColor: 'blue'
+  windowSize: {
+    width: window.innerWidth,
+    height: window.innerHeight
+  },
+  darkMode: true
 }
 
 interface AppContextInterface extends StateInterface {
+  resizeWindow: (newWindowSize: WindowSize) => void
   toggleDarkMode: () => void
-  changeThemeColor: (color: ThemeColor) => void
 }
 
 const AppContext = createContext<AppContextInterface>({
   ...initialState,
-  toggleDarkMode: () => null,
-  changeThemeColor: () => null
+  resizeWindow: () => null,
+  toggleDarkMode: () => null
 })
 
 type Props = {
@@ -44,12 +42,12 @@ const AppContextProvider = ({ children }: Props) => {
     dispatch({ type: ActionType.TOGGLE_DARK_MODE })
   }
 
-  const changeThemeColor = (color: string) => {
-    dispatch({ type: ActionType.CHANGE_THEME_COLOR, payload: { color } })
+  const resizeWindow = (newWindowSize: { width: number; height: number }) => {
+    dispatch({ type: ActionType.RESIZE_WINDOW, payload: { newWindowSize } })
   }
 
   return (
-    <AppContext.Provider value={{ ...state, toggleDarkMode, changeThemeColor }}>
+    <AppContext.Provider value={{ ...state, toggleDarkMode, resizeWindow }}>
       {children}
     </AppContext.Provider>
   )

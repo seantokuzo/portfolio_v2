@@ -1,0 +1,42 @@
+.header {
+  width: 100%;
+  min-width: 100vw;
+  padding: 1rem;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+  padding: 1rem;
+
+  &-navbar {
+    &__list {
+      @include flex(row, space-between, center);
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      text-decoration: none;
+      text-align: center;
+      height: 80%;
+    }
+    
+    &__item {
+      margin: 0 5px;
+    }
+  
+    &__link {
+      margin: 0;
+      font-size: 0.75rem;
+      text-decoration: none;
+      cursor: pointer;
+    }
+  
+    &__link:hover {
+      font-weight: bolder;
+      @include box-shadow;
+    }
+  }
+
+  
+}

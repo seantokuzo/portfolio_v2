@@ -1,0 +1,154 @@
+.nav-div {
+  margin: 0;
+  position: fixed;
+  top: 0;
+  right: 0;
+
+  height: 100vh;
+}
+
+.navbar {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0 1.25em;
+
+  // color: $th-dm-text;
+  background: #000000d0;
+  z-index: 100;
+
+  transform: translateX(100%);
+  transition: transform 400ms cubic-bezier(.5, 0, .5, 1);
+
+  overflow: hidden;
+}
+
+.navbar__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  text-align: center;
+  height: 80%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.navbar__item {
+  margin: 0 5px;
+}
+
+.navbar__link {
+  margin: 0;
+  font-size: 1.25rem;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.navbar__link:hover {
+  @include box-shadow;
+  font-weight: bolder;
+}
+
+.nav-toggle {
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+  position: relative;
+  top: 1.75em;
+  right: 1.5em;
+
+  z-index: 1000;
+}
+
+.nav-open .navbar {
+  transform: translateX(0%);
+  @include box-shadow;
+}
+
+.hamburger {
+  display: block;
+  position: relative;
+}
+
+.hamburger,
+.hamburger:before,
+.hamburger:after {
+  // background: $th-dm-bg;
+  height: 3px;
+  border-radius: 10px;
+  transition: transform 400ms ease-in-out;
+}
+
+.hamburger:before,
+.hamburger:after {
+  content: '';
+  position: absolute;
+  width: 25px;
+  left: 0;
+  right: 0;
+}
+
+.hamburger {
+  width: 22px;
+}
+
+.nav-open .hamburger {
+  width: 0;
+  // transform: translateX(-15px);
+  @include transition-ease;
+}
+
+.nav-open .hamburger::after {
+  transform: rotate(45deg) translateY(8.5px);
+}
+
+.nav-open .hamburger::before {
+  transform: rotate(-45deg) translateY(-8.5px);
+}
+
+
+
+
+.hamburger:before {
+  top: 6px;
+}
+
+.hamburger:after {
+  bottom: 6px;
+}
+
+.light-mode
+.hamburger,
+.hamburger:before,
+.hamburger:after {
+  background: $th-lm-text;
+}
+
+.light-mode
+.nav-open .hamburger::before,
+.nav-open .hamburger::after {
+  background: $th-lm-text;
+}
+
+.dark-mode
+.hamburger,
+.hamburger:before,
+.hamburger:after {
+  background: $th-dm-text;
+}
+
+.dark-mode
+.nav-open .hamburger::before,
+.nav-open .hamburger::after {
+  background: $th-dm-text;
+}
+
+// .nav-open .hamburger {
+//   background: none;
+// }

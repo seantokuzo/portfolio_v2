@@ -1,8 +1,8 @@
-@mixin flex($direction, $align, $justify) {
+@mixin flex($direction: column, $justify: center, $align: center) {
   display: flex;
   flex-direction: $direction;
-  align-items: $align;
   justify-content: $justify;
+  align-items: $align;
 }
 
 @mixin absolute-center($transY: -50%) {
