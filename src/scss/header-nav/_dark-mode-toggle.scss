@@ -1,0 +1,56 @@
+/* ********************************* */
+/* *** SUN MOON DARKMODE TOGGLER *** */
+/* ********************************* */
+.toggle-btn {
+  width: 38px;
+  height: 38px;
+  background: $th-dm-bg;
+  border: 0;
+  border-width: 2px;
+  border-style: solid;
+  border-color: $th-dm-text;
+  border-radius: 50%;
+  overflow: hidden;
+  transform: scale(.75);
+  cursor: pointer;
+  
+  @include transition-ease(200ms);
+  
+  &:hover {
+    @include box-shadow;
+  }
+}
+
+.light-mode {
+  .toggle-btn {
+    border-color: $th-lm-text;
+    background: $th-dm-text;
+    @include box-shadow;
+  }
+}
+
+.toggle-icon {
+  display: block;
+  font-size: 23px;
+}
+
+.toggle-sun {
+  color: $th-lm-text;
+  transition: transform 500ms ease-out;
+  transform: translateY(-17px);
+}
+
+.toggle-moon {
+  color: $th-dm-text;
+  transition: transform 500ms ease-out;
+  transform: translateY(-25px);
+}
+
+.toggle-on {
+  .toggle-sun {
+    transform: translateY(13px);
+  }
+  .toggle-moon {
+    transform: translateY(5.5px);
+  }
+}

@@ -38,27 +38,22 @@
     flex-direction: column;
     justify-content: space-evenly;
   }
-}
-
-.nav-open .navbar {
-  transform: translateX(0%);
-  @include box-shadow;
-}
-
-.navbar__item {
-  margin: 0 5px;
-}
-
-.navbar__link {
-  margin: 0;
-  font-size: 1.25rem;
-  text-decoration: none;
-  cursor: pointer;
-}
-
-.navbar__link:hover {
-  @include box-shadow;
-  font-weight: bolder;
+  
+  &__item {
+    margin: 0 5px;
+  }
+  
+  &__link {
+    margin: 0;
+    font-size: 1.5rem;
+    text-decoration: none;
+    cursor: pointer;
+    
+    &:hover {
+      @include box-shadow;
+      font-weight: bolder;
+    }
+  }
 }
 
 .nav-toggle {
@@ -68,8 +63,28 @@
   position: relative;
   top: 1.75em;
   right: 1.5em;
-
+  
   z-index: 1000;
+}
+
+.nav-open {
+  .navbar {
+    transform: translateX(0%);
+    @include box-shadow;
+  }
+  
+  .hamburger {
+    width: 0;
+    @include transition-ease;
+  }
+  
+  .hamburger::after {
+    transform: rotate(45deg) translateY(8.5px);
+  }
+  
+  .hamburger::before {
+    transform: rotate(-45deg) translateY(-8.5px);
+  }
 }
 
 .hamburger {
@@ -101,23 +116,6 @@
   width: 22px;
 }
 
-.nav-open .hamburger {
-  width: 0;
-  // transform: translateX(-15px);
-  @include transition-ease;
-}
-
-.nav-open .hamburger::after {
-  transform: rotate(45deg) translateY(8.5px);
-}
-
-.nav-open .hamburger::before {
-  transform: rotate(-45deg) translateY(-8.5px);
-}
-
-
-
-
 .hamburger:before {
   top: 6px;
 }
@@ -126,32 +124,33 @@
   bottom: 6px;
 }
 
-.light-mode
-.hamburger,
-.hamburger:before,
-.hamburger:after {
-  background: $th-lm-text;
+.light-mode {
+  .navbar__link {
+    color: $th-dm-text;
+  }
+
+  .hamburger,
+  .hamburger:before,
+  .hamburger:after {
+    background: $th-lm-text;
+  }
+
+  .nav-open .hamburger::before,
+  .nav-open .hamburger::after {
+    background: $th-lm-text;
+  }
 }
 
-.light-mode
-.nav-open .hamburger::before,
-.nav-open .hamburger::after {
-  background: $th-lm-text;
-}
+.dark-mode {
+  .hamburger,
+  .hamburger:before,
+  .hamburger:after {
+    background: $th-dm-text;
+  }
 
-.dark-mode
-.hamburger,
-.hamburger:before,
-.hamburger:after {
-  background: $th-dm-text;
-}
+  .nav-open .hamburger::before,
+  .nav-open .hamburger::after {
+    background: $th-dm-text;
+  }
 
-.dark-mode
-.nav-open .hamburger::before,
-.nav-open .hamburger::after {
-  background: $th-dm-text;
 }
-
-// .nav-open .hamburger {
-//   background: none;
-// }

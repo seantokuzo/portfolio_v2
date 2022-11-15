@@ -9,6 +9,14 @@
   align-items: center;
 
   &-navbar {
+    width: 100%;
+    @include flex(row, space-between, center);
+
+    &__outer-div {
+      min-width: 3rem;
+      @include flex(row, end, center);
+    }
+
     &__list {
       @include flex(row, space-between, center);
       margin: 0;

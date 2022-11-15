@@ -1,10 +1,12 @@
 // DARKMODE COLORS
-$th-dm-bg: #414141;
+// $th-dm-bg: #414141;
+$th-dm-bg: #2b2b2b;
 $th-dm-text: white;
 
 // LIGHT MODE COLORS
 $th-lm-bg: white;
-$th-lm-text:#414141;
+// $th-lm-text:#414141;
+$th-lm-text:#2b2b2b;
 
 
 $cl-red: #E97777;
@@ -14,3 +16,21 @@ $cl-green: #2a9749;
 $cl-purple: purple;
 $cl-blue: blue;
 $cl-vanilla: blanchedalmond;
+
+.dark-mode {
+  background: $th-dm-bg;
+  color: $th-dm-text;
+}
+
+.light-mode {
+  color: $th-lm-text;
+  background: $th-lm-bg;
+}
+
+.dark-mode a {
+  color: $th-dm-text;
+}
+
+.light-mode a {
+  color: $th-lm-text;
+}

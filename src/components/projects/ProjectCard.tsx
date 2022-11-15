@@ -20,7 +20,7 @@ const ProjectCard: React.FC<{ project: ProjectType }> = ({ project }) => {
           />
         </div>
       </a>
-      <h1 className="project-card__title">{project.name}</h1>
+      <h3 className="project-card__title">{project.name}</h3>
       <p className="project-card__description">{project.description}</p>
     </div>
   )

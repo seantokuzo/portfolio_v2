@@ -21,6 +21,6 @@
     0.125em 0.125em 0.25em rgba($color, $op2);
 }
 
-@mixin text-shadow($color: black, $op: 0.5) {
-  text-shadow: .25em .25em .5em rgba($color, $op);
+@mixin text-shadow($color: black, $op: 0.75, $xy: 2px, $blur: 2px) {
+  text-shadow: $xy $xy $blur rgba($color, $op);
 }

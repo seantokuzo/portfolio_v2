@@ -15,6 +15,7 @@ const HamburgerNav: React.FC = () => {
         <div className="hamburger"></div>
       </button>
       <nav className="navbar">
+        <DarkModeToggle />
         <ul className="navbar__list">
           <li className="navbar__item" onClick={closeNav}>
             <a href="#home" className="navbar__link">
@@ -37,7 +38,6 @@ const HamburgerNav: React.FC = () => {
             </a>
           </li>
         </ul>
-        <DarkModeToggle />
       </nav>
     </div>
   )
