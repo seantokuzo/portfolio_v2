@@ -1,4 +1,5 @@
 import { useAppContext } from '../../context/appContext'
+import DarkModeToggle from './DarkModeToggle'
 import HamburgerNav from './HamburgerNav'
 import HeaderNav from './HeaderNav'
 
@@ -8,9 +9,10 @@ const Header: React.FC = () => {
   console.log(windowSize)
 
   return (
-    <header className="header">
-      {/* <HeaderNav /> */}
-      <HamburgerNav />
+    <header className="header" id="home">
+      {windowSize.width > 480 && <HeaderNav />}
+      {windowSize.width <= 480 && <HamburgerNav />}
+      {/* <DarkModeToggle /> */}
     </header>
   )
 }

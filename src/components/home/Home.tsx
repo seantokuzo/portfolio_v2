@@ -1,5 +1,5 @@
 const Home: React.FC = () => {
-  return <section className="section" id="home">Home</section>
+  return <section className="section">Home</section>
 }
 
 export default Home

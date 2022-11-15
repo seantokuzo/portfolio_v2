@@ -82,25 +82,25 @@ const stackIcons = [
     img: 'https://seantokuzo-bucket.s3.us-west-1.amazonaws.com/portfolio-img/stack-icons/pug-icon.svg',
     name: 'Pug',
     special: false
+  },
+  {
+    link: 'https://nextjs.org/',
+    img: 'https://seantokuzo-bucket.s3.us-west-1.amazonaws.com/portfolio-img/stack-icons/nextjs-icon.svg',
+    name: 'Next.js',
+    special: true
+  },
+  {
+    link: 'https://www.typescriptlang.org/',
+    img: 'https://seantokuzo-bucket.s3.us-west-1.amazonaws.com/portfolio-img/stack-icons/typescript-icon.svg',
+    name: 'TypeScript',
+    special: false
+  },
+  {
+    link: 'https://tailwindcss.com/',
+    img: 'https://seantokuzo-bucket.s3.us-west-1.amazonaws.com/portfolio-img/stack-icons/tailwindcss-icon.svg',
+    name: 'Tailwind CSS',
+    special: false
   }
-  // {
-  //   link: 'https://nextjs.org/',
-  //   img: 'https://seantokuzo-bucket.s3.us-west-1.amazonaws.com/portfolio-img/stack-icons/nextjs-icon.svg',
-  //   name: 'Next.js',
-  //   special: true
-  // },
-  // {
-  //   link: 'https://www.typescriptlang.org/',
-  //   img: 'https://seantokuzo-bucket.s3.us-west-1.amazonaws.com/portfolio-img/stack-icons/typescript-icon.svg',
-  //   name: 'TypeScript',
-  //   special: false
-  // },
-  // {
-  //   link: 'https://tailwindcss.com/',
-  //   img: 'https://seantokuzo-bucket.s3.us-west-1.amazonaws.com/portfolio-img/stack-icons/tailwindcss-icon.svg',
-  //   name: 'Tailwind CSS',
-  //   special: false
-  // },
   // {
   //   link: 'https://www.gatsbyjs.com/',
   //   img: 'https://seantokuzo-bucket.s3.us-west-1.amazonaws.com/portfolio-img/stack-icons/gatsby.svg',

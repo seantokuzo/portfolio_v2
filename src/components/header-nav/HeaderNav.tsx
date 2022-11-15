@@ -3,7 +3,7 @@ const HeaderNav: React.FC = () => {
     <nav className="header-navbar">
       <ul className="header-navbar__list">
         <li className="header-navbar__item">
-          <a href="#top" className="header-navbar__link">
+          <a href="#home" className="header-navbar__link">
             Home
           </a>
         </li>

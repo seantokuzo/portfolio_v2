@@ -1,0 +1,37 @@
+.project {
+  @include flex;
+
+
+  &__title {
+    font-size: 2rem;
+  }
+
+  &-card {
+    @include flex;
+    
+    &__link {
+      @include flex;
+    }
+    
+    &__img-div {
+      @include flex;
+      background-color: $cl-red;
+      padding: 2rem;
+      border-radius: 5px;
+
+    }
+
+    &__img {
+      width: 50%;
+    }
+
+    &__title {
+
+    }
+
+    &__description {
+
+    }
+  }
+
+}

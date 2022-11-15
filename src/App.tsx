@@ -6,21 +6,21 @@ import {
   Projects,
   Contact
 } from './components/components.io'
+import FloatingNav from './components/header-nav/FloatingNav'
 import { useAppContext } from './context/appContext'
 
 const App: React.FC = () => {
   const { darkMode, resizeWindow } = useAppContext()
 
-  const handleWindowResize = () => {
-    resizeWindow({
-      width: window.innerWidth,
-      height: window.innerHeight
-    })
-  }
-
+  // WINDOW RESIZE LISTENER - ATTACH / CLEANUP
   useEffect(() => {
+    const handleWindowResize = () => {
+      resizeWindow({
+        width: window.innerWidth,
+        height: window.innerHeight
+      })
+    }
     window.addEventListener('resize', handleWindowResize)
-
     return () => {
       window.removeEventListener('resize', handleWindowResize)
     }
@@ -33,6 +33,7 @@ const App: React.FC = () => {
       <About />
       <Projects />
       <Contact />
+      <FloatingNav />
     </div>
   )
 }

@@ -1,8 +1,10 @@
+@import 'globals/typography';
 @import 'globals/colors';
 @import 'globals/mixins';
 @import 'globals/config';
 @import 'header-nav/header';
 @import 'header-nav/hamburger-nav';
+@import 'projects/projects';
 
 .app {
   width: 100%;

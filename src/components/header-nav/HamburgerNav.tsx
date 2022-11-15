@@ -17,7 +17,7 @@ const HamburgerNav: React.FC = () => {
       <nav className="navbar">
         <ul className="navbar__list">
           <li className="navbar__item" onClick={closeNav}>
-            <a href="#top" className="navbar__link">
+            <a href="#home" className="navbar__link">
               Home
             </a>
           </li>
